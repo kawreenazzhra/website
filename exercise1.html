@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Exercise 1 </title> 
+    <script>
+        function limitCBSelection(checkbox){
+            let checkboxes = document.querySelectorAll('input[name="hobi"]');
+            let checkedCount = 0;
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) checkedCount++;
+            });
+            if (checkedCount > 2){
+                checkbox.checked = false;
+                alert("Maksimal hanya boleh memilih 2 hobi!");
+            }
+        }
+    </script>  
+    </head>
+    <h1> Data Mahasiswa</h1>
+    <body>
+        <table>
+            <tr>
+                <td>NIM :</td> 
+                <td>
+                    <input type="number" maxlength="12" size="20" required />
+                </td>
+            </tr> 
+            <tr>
+                <td>Nama :</td> 
+                <td>
+                    <input type="text" maxlength="12" size="20" required />
+                </td> 
+            </tr>
+            <tr>
+                <td>Tgl Lahir (dd-mm-yy) :</td>
+                <td>
+                <input type="date" min="2000-01-01" max="2025-09-23" name="bday" />
+                </td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin :</td>
+                <td>
+                    <input type="radio" name="gender" value="male" checked /> Male
+                    <input type="radio" name="gender" value="female" checked /> Female 
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat di Bandung :</td>
+                <td>
+                    <textarea name="message" rows="6" cols="24"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Tinggal di :</td>
+                <td>
+                    <select id="tinggal">
+                        <option value="--pilih--">--pilih--</option>
+                        <option value="Kos/kontrakan">Kos/kontrakan</option>
+                        <option value="Rumah saudara">Rumah saudara</option>
+                        <option value="Rumah Orang tua">Rumah Orang tua</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Pilih 2 hobi yang paling disukai :</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="Science" onclick="limitCBSelection(this)" /> Science <br />
+                    <input type="checkbox" name="hobi" value="Technology" onclick="limitCBSelection(this)" /> Technology <br />
+                    <input type="checkbox" name="hobi" value="Art" onclick="limitCBSelection(this)"  /> Art <br />
+                    <input type="checkbox" name="hobi" value="Sport" onclick="limitCBSelection(this)"  /> Sport <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <br />
+                <input type="submit" value="Submit" />
+                 <input type="reset" value="Reset" />
+                </td>
+            </tr> 
+        </table>
+    </body>
+
+
+</html>

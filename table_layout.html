@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Layout</title>
+    <style>
+        table {
+            width: 400px;
+            height: 300px;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        td {
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        /* Inner table for B, C, D, E */
+        .inner-table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+        .inner-table td {
+            border: 1px solid black;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <!-- Cell A spanning 2 rows on the left -->
+            <td rowspan="2" style="width: 25%;">A</td>
+            <!-- Top right section with B and C -->
+            <td colspan="2" style="height: 50%;">
+                <table class="inner-table">
+                    <tr>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <!-- Bottom right section with D and E -->
+            <td colspan="2" style="height: 50%;">
+                <table class="inner-table">
+                    <tr>
+                        <td>D</td>
+                        <td>E</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <!-- Bottom row with F and G -->
+            <td style="width: 25%;">F</td>

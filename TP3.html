@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> digunakan untuk memberitahu browser bahwa ini adalah dokumen HTML5 -->
+
+<html lang="en">
+<!-- <html> adalah root element yang membungkus semua isi halaman 
+     attribute lang="en" berarti bahasa utama halaman adalah inggris -->
+
+<head>
+    <!-- <head> berisi metadata dan pengaturan untuk dokumen -->
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> memastikan teks bisa mendukung karakter internasional -->
+    <title>Karina Azzahra - Profile</title>
+    <!-- <title> menampilkan judul pada tab browser -->
+
+    <style>
+        /* <style> digunakan untuk menambahkan CSS langsung di dalam file HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px; /* ngasi jarak antara konten dan tepi browser */
+            line-height: 1.6; /* bikin teks lebih rapi dan tidak terlalu rapat */
+        }
+        h1, h2 {
+            color: #333; /* ngatur warna judul agar lebih mencolok, warna abu */
+        }
+        img {
+            border-radius: 10px; /* bikin sudut gambar membulat 10px */
+        }
+        table {
+            margin-top: 10px; /* ngasi jarak tabel dari elemen sebelumnya supaya tidak terlalu menempel */
+        }
+        .profile-section {
+            display: flex; /* Supaya isi div sejajar dalam 1 baris */
+            gap: 20px; /* Memberi jarak antar foto dan teks */
+            align-items: center; /* Agar teks sejajar vertikal dengan foto */
+        }
+        .skills-table th, .skills-table td {
+            padding: 5px 10px;
+            text-align: left; /* Isi tabel rata kiri supaya mudah dibaca */
+        }
+        iframe {
+            border-radius: 10px; /* Membuat video (iframe) lebih rapi dengan sudut membulat */
+        }
+        form {
+            margin-top: 10px; /* Menambah sedikit jarak antara form dengan elemen di atasnya */
+        }
+        form table td {
+            padding: 5px; /* Menambah jarak antar kolom pada tabel form supaya tidak terlalu rapat */
+        }
+        button { /* Styling tombol agar lebih enak dilihat dan ada ruang di dalamnya */
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <body> adalah bagian utama yang menampilkan semua konten yang terlihat di halaman -->
+
+    <!-- Header -->
+    <h1>Karina Azzahra</h1>
+    <!-- <h1> adalah heading terbesar, digunakan untuk menampilkan nama sebagai judul utama -->
+
+    <!-- Foto & Deskripsi -->
+    <div class="profile-section">
+        <!-- <div> digunakan untuk mengelompokkan elemen (gambar + teks deskripsi) 
+             class="profile-section" dipakai untuk styling flex agar sejajar -->
+        <img src="https://github.com/kawreenazzhra/website/blob/main/FORMAL_KARINAAZZAHRA.jpg?raw=true" 
+             alt="Foto Karina" width="150">
+        <!-- <img> menampilkan gambar profil. 
+             Attribute alt memberikan teks alternatif jika gambar tidak dapat ditampilkan. 
+             Attribute width mengatur lebar gambar. -->
+        <p>
+            <!-- <p> membuat paragraf berisi deskripsi tentang diri -->
+            Hi! I'm Karina Azzahra, an Information Technology student passionate about 
+            operating systems, software development, and the application of IT in industries.  
+            I love learning new tech, collaborating with others, and continuously improving myself. 🚀
+        </p>
+    </div>
+
+    <h2>Skills</h2>
+    <!-- <h2> heading level 2, digunakan untuk sub-judul bagian keterampilan -->
+    <table class="skills-table" border="1" cellpadding="5">
+        <!-- <table> membuat tabel untuk menampilkan daftar skill.
+             border="1" memberi garis tepi, cellpadding memberi jarak di dalam sel -->
+        <tr>
+            <!-- <tr> membuat baris baru pada tabel -->
+            <th>Skill</th>
+            <!-- <th> membuat sel header (judul kolom) -->
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td>HTML & CSS</td>
+            <!-- <td> membuat sel data -->
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Beginner</td>
+        </tr>
+        <tr>
+            <td>C++ / Go</td>
+            <td>Beginner</td>
+        </tr>
+    </table>
+
+    <h2>My Fav Things to Do!</h2>
+    <div>
+        <!-- <div> dipakai untuk mengelompokkan beberapa gambar hobi -->
+        <img src="https://tse1.mm.bing.net/th/id/OIP.m0xc8-YGcNTzfXwgadwB8QHaE7?pid=Api&P=0&h=180" width="100">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Nd3TYI0dUgo-AYwdRl5c8gAAAA?pid=Api&P=0&h=180" width="100">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.pGqQPclKKZhRUGRLTDmJHAHaE7?pid=Api&P=0&h=180" width="100">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.pvDbWfR3lHllouM06vGbvgHaE8?pid=Api&P=0&h=180" width="100">
+        <!-- Setiap <img> digunakan untuk menampilkan gambar hobi -->
+    </div>
+
+    <h2>My Kind of Humor :D</h2>
+    <iframe width="320" height="240" 
+            src="https://www.youtube.com/embed/irUkEy1apn8" 
+            title="YouTube video" allowfullscreen>
+    </iframe>
+    <!-- <iframe> digunakan untuk menampilkan video dari YouTube di dalam halaman -->
+
+    <h2>Hit Me Up!</h2>
+    <!-- <form> digunakan untuk membuat form kontak -->
+    <form>
+        <table>
+            <!-- Tabel dipakai untuk merapikan input form agar sejajar -->
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" required></td>
+                <!-- <input type="text"> membuat field teks, required berarti wajib diisi -->
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" required></td>
+                <!-- <input type="email"> field khusus email agar format divalidasi -->
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea rows="3" cols="25" placeholder="Write your message..."></textarea></td>
+                <!-- <textarea> membuat kotak teks untuk pesan panjang, placeholder memberi teks petunjuk -->
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <!-- <input type="radio"> membuat pilihan satu dari beberapa opsi -->
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="Music"> Music
+                    <input type="checkbox" name="hobi" value="Sport"> Sport
+                    <input type="checkbox" name="hobi" value="Others"> Others
+                    <!-- <input type="checkbox"> memungkinkan memilih lebih dari satu opsi -->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <!-- colspan="2" membuat sel melebar 2 kolom supaya tombol center -->
+                    <button type="submit">Send</button>
+                    <!-- <button type="submit"> untuk mengirim form -->
+                    <button type="reset">Reset</button>
+                    <!-- <button type="reset"> untuk menghapus isi form -->
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Let's Connect!</h2>
+    <table border="1" cellpadding="5">
+        <!-- Tabel dipakai untuk merapikan daftar sosial media -->
+        <tr>
+            <th>Platform</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td>Instagram</td>
+            <td><a href="https://instagram.com/krinazzhra" target="_blank">@krinazzhra</a></td>
+            <!-- <a> adalah hyperlink, target="_blank" membuka di tab baru -->
+        </tr>
+        <tr>
+            <td>LinkedIn</td>
+            <td><a href="https://linkedin.com/in/krinazzhra" target="_blank">Karina Azzahra</a></td>
+        </tr>
+        <tr>
+            <td>GitHub</td>
+            <td><a href="https://github.com/kawreenazzhra" target="_blank">kawreenazzhra</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>
