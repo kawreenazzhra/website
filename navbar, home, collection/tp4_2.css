@@ -1,0 +1,134 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+}
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 999;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(210, 105, 30, 0);
+}
+nav div img{
+    width: 180px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+nav ul li a:hover{
+    border-bottom: 1px solid chocolate;
+    color: chocolate;
+}
+.home-section {
+    position: relative;
+    margin-top: 20px;
+}
+.home-section img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+.home-text h1 {
+    font-size: 40px;
+}
+.home-text h1 span {
+    color: #ffcc00;
+}
+.home-text p {
+    font-size: 18px;
+}
+.collections {
+    text-align: center;
+    margin: 60px 0;
+}
+.collections h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.collection-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+.card p {
+    padding: 10px;
+    font-weight: 500;
+    text-align: justify;
+}
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .collection-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .home-section img {
+        height: 250px;
+    }
+
+    .home-text h1 {
+        font-size: 28px;
+    }
+
+    .home-text p {
+        font-size: 14px;
+    }
+}
